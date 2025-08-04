@@ -1,0 +1,45 @@
+{
+    "characters": [
+        {
+            "img_path": "/src/assets/ueki.png",
+            "name": "Ueki",
+            "stats": {
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    1.1
+                ],
+                "arc": {
+                    "val": 4,
+                    "name": "Silent old building arc"
+                }
+            }
+        },
+        {
+            "img_path": "/src/assets/Hirosif.webp",
+            "name": "Hiroshi",
+            "stats": {
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    1.1,
+                    3.0,
+                    4.2,
+                    5.2,
+                    6.03,
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        }
+    ]
+}

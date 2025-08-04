@@ -3,66 +3,73 @@
   import viteLogo from "/vite.svg";
   import Counter from "./lib/Counter.svelte";
   import Searchbar from "./lib/Searchbar.svelte";
+  import Guess from "./lib/Guess.svelte";
 
-  let version = "1.1";
+  let right_guess_info = {
+    img_path: "/src/assets/ueki.png",
+    name: "Ueki",
+    stats: {
+      gender: "Male",
+      age: 14,
+      species: ["Human"],
+      versions: [1.1],
+      arc: {
+        val: 4,
+        name: "Silent old building arc",
+      },
+    },
+  };
+  let player_guess_info = {
+    img_path: "/src/assets/ueki.png",
+    name: "Ueki",
+    stats: {
+      gender: "Male",
+      age: 14,
+      species: ["Human"],
+      versions: [1.1],
+      arc: {
+        val: 4,
+        name: "Silent old building arc",
+      },
+    },
+  };
+
+  let info_for_searchbar = [];
+  let character_dump = [];
+  let loading = fetch("./src/info.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      character_dump = data["characters"];
+      character_dump.forEach((character) => {
+        info_for_searchbar.push([character["img_path"], character["name"]]);
+      });
+    })
+    .catch((error) => console.error("Failed to fetch data:", error));
 </script>
 
 <main>
-  <div id="center-container">
-    <img id="logo" src="./src/assets/logo_real.png" />
-
-    <Searchbar />
-
-    <div id="guesses-container">
-      <div id="filters">
-        <span class="filter">Character</span>
-        <span class="filter">Gender</span>
-        <span class="filter">Age</span>
-        <span class="filter">Species</span>
-        <span class="filter">Versions</span>
-        <span class="filter">First appearance</span>
-      </div>
-      <hr />
-
-      <div class="guess">
-        <div class="char-image-container">
-          <img class="char-image" src="./src/assets/ueki.png" />
-          <span class="char-text">Ueki</span>
+  {#await loading}
+    <div></div>
+  {:then}
+    <div id="center-container">
+      <img id="logo" src="/src/assets/logo_real.png" />
+      <Searchbar char_info={info_for_searchbar} />
+      <div id="guesses-container">
+        <div id="filters">
+          <span class="filter">Character</span>
+          <span class="filter">Gender</span>
+          <span class="filter">Age</span>
+          <span class="filter">Species</span>
+          <span class="filter">Versions</span>
+          <span class="filter">First appearance</span>
         </div>
-        <div class="correct color-box">
-          <span>Male</span>
-        </div>
-        <div class="incorrect color-box">
-          <span>14</span>
-        </div>
-        <div class="partial color-box">
-          <span>Human</span>
-        </div>
-        <div class="partial color-box">
-          <span>{version}</span>
-        </div>
-        <div class="incorrect color-box">
-          <span>▲ Mansion on the outskirts of town arc</span>
-        </div>
+        <hr />
       </div>
     </div>
-  </div>
+  {/await}
 </main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>

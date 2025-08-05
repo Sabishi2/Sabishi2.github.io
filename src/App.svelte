@@ -5,6 +5,10 @@
   import Searchbar from "./lib/Searchbar.svelte";
   import Guess from "./lib/Guess.svelte";
   import { getCharacter } from "./lib/TodaysGuess.svelte";
+  import winImage from "./assets/win.png";
+  import backgroundImg from "./assets/bg.jpg";
+  import logo from "./assets/logo_real.png";
+  import json from "./info.json";
 
   const sleep = (time) => new Promise((resolve) => setTimeout(resolve, time));
   let time_until_next_character = $state();
@@ -84,30 +88,23 @@
 
   let info_for_searchbar = [];
   let character_dump = [];
-  let loading = fetch("./src/info.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      character_dump = data["characters"];
-      character_dump.forEach((character) => {
-        info_for_searchbar.push([
-          character["img_path"],
-          character["name"],
-          character["id"],
-        ]);
-      });
-      let right_char_index = getCharacter(new Date(), character_dump.length);
-      right_guess_info = character_dump[right_char_index];
 
-      array.forEach((id) => {
-        player_guess_infos.push(character_dump[id]);
-      });
-    })
-    .catch((error) => console.error("Failed to fetch data:", error));
+  let loading = fetch("./src/info.json");
+
+  character_dump = json["characters"];
+  character_dump.forEach((character) => {
+    info_for_searchbar.push([
+      character["img_path"],
+      character["name"],
+      character["id"],
+    ]);
+  });
+  let right_char_index = getCharacter(new Date(), character_dump.length);
+  right_guess_info = character_dump[right_char_index];
+
+  array.forEach((id) => {
+    player_guess_infos.push(character_dump[id]);
+  });
 </script>
 
 <main id="main">
@@ -131,14 +128,14 @@
           mouseOverWin = false;
         }}
       >
-        <img id="win-img" src="./src/assets/win.png" alt="You're winner :)" />
+        <img id="win-img" src={winImage} alt="You're winner :)" />
         <h1>Seuraava hahmo in {time_until_next_character}</h1>
         <br /><br /><br />
         <h1>näin voimme jatkaa</h1>
       </div>
     </div>
     <div id="center-container">
-      <img id="logo" src="/src/assets/logo_real.png" />
+      <img id="logo" src={logo} />
       <Searchbar
         char_info={info_for_searchbar}
         choose_func={chooseFunc}

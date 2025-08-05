@@ -5,7 +5,6 @@ import * as path from "path";
 // https://vite.dev/config/
 
 export default defineConfig({
-  base: "https://Sabishi2.github.io/",
   plugins: [svelte()],
   resolve: {
     alias: {

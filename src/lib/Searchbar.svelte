@@ -42,7 +42,8 @@
     async function fetch_photo(img_src, index) {
         let img_arr = img_src.split("/");
         let img_str = img_arr[img_arr.length - 1];
-        let src = getImageUrl(img_str);
+        let img_arr2 = img_str.split(".");
+        let src = getImageUrl(img_arr2[0]);
 
         resultList[index][0] = src;
     }

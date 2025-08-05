@@ -28,7 +28,7 @@
 
     function getImageUrl(imageName) {
         var imageUrl;
-        const modules = import.meta.glob("/src/assets/*", { eager: true });
+        const modules = import.meta.glob("./src/assets/*", { eager: true });
         for (const path in modules) {
             console.log(path);
             if (path.includes(imageName)) {

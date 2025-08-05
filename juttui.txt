@@ -21,8 +21,9 @@ First appearance
  1.1, 3.0, 4.2, 5.2, 6.03, 6.23
 
 
--Mansion on the outskirts of town arc
--Dark Basement arc
--dilapidated annex arc
--annex basement arc
--Silent old building arc
+-Mansion on the outskirts of town arc 0
+-Dark Basement arc 1
+-Dingy Attic arc 2
+-dilapidated annex arc 3
+-annex basement arc 4 
+-Silent old building arc 5

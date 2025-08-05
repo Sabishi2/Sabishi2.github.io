@@ -1,6 +1,10 @@
+html,
 body {
+  overflow-x: hidden;
+  max-width: 100%;
   background-image: url("./src/assets/bg.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 input {
@@ -15,11 +19,12 @@ input:focus {
   outline: none;
 }
 
+#main {}
+
 #app {
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
   width: 100%;
-  height: 100%;
+  height: auto;
   top: 0px;
   left: 0px;
 }
@@ -28,11 +33,40 @@ span {
   color: #ffffff;
 }
 
+h1 {
+  color: #c882c8;
+}
+
+#win-container {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#win-screen {
+  margin-top: 40px;
+  width: 480px;
+  height: 640px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+}
+
+#win-img {
+  width: 100%;
+  height: auto;
+}
+
 #center-container {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 1280px;
+  width: 1440px;
   height: auto;
 
   flex-direction: column;
@@ -66,7 +100,6 @@ span {
   height: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-items: center;
 }
 
@@ -75,8 +108,7 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: center;
-  margin: 5px 5px;
+  margin: 5px 0px 5px 10px;
 }
 
 #search-bar {
@@ -154,7 +186,7 @@ span {
   font-size: 24px;
 
   display: grid;
-  grid-template-columns: [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
+  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
   gap: 10px;
 }
 
@@ -167,11 +199,12 @@ span {
   width: 100%;
   height: 80px;
   font-size: 24px;
+  margin-bottom: 20px;
 
   display: grid;
   align-items: stretch;
   justify-items: stretch;
-  grid-template-columns: [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
+  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
   gap: 10px;
 
 }
@@ -247,19 +280,16 @@ span {
 }
 
 .fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.25s;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: opacity 0.25s linear;
+
 }
 
 .fade-out {
-  opacity: 1;
-  animation-name: fadOutOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.25s;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: visibility 0s 0.25s, opacity 0.25s linear;
 }
 
 

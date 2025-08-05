@@ -1,13 +1,19 @@
 <script>
     import Result from "./Result.svelte";
 
-    let { char_info } = $props();
-    console.log(char_info);
+    let { char_info, choose_func, cookie_guessed } = $props();
     let searchResults = null;
     let search = $state("");
+    let mouseOver = false;
     let resultList = $state([]);
 
-    const search_for = () => {};
+    let guessed_chars = cookie_guessed;
+    const choose = (name, id) => {
+        guessed_chars.push(id);
+        searchChange();
+        searchResults.classList.add("inactive");
+        choose_func(name, id);
+    };
 
     const onFocus = () => {
         if (resultList.length != 0) {
@@ -15,7 +21,9 @@
         }
     };
     const onFocusOut = () => {
-        searchResults.classList.add("inactive");
+        if (!mouseOver) {
+            searchResults.classList.add("inactive");
+        }
     };
 
     const searchChange = () => {
@@ -27,9 +35,11 @@
         }
         char_info.forEach((char) => {
             if (char[1].toLowerCase().includes(search.toLowerCase())) {
-                resultList.push(char);
-                searchResults.classList.remove("inactive");
-                eesyks = true;
+                if (!guessed_chars.includes(char[2])) {
+                    resultList.push(char);
+                    searchResults.classList.remove("inactive");
+                    eesyks = true;
+                }
             }
         });
         if (!eesyks) {
@@ -38,7 +48,16 @@
     };
 </script>
 
-<div id="search-bar-container">
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div
+    id="search-bar-container"
+    onmouseenter={() => {
+        mouseOver = true;
+    }}
+    onmouseleave={() => {
+        mouseOver = false;
+    }}
+>
     <div id="search-bar-container-inner">
         <input
             onfocus={onFocus}
@@ -50,17 +69,23 @@
             name="search-bar"
             placeholder="Write your search here (e.g Hiroshi)"
         />
+        <!--
         <input
             type="button"
             id="search-btn"
             name="search-btn"
             onclick={search_for}
-        />
+        />-->
     </div>
 
     <div id="search-results" class="inactive" bind:this={searchResults}>
         {#each resultList as result}
-            <Result img_src={result[0]} name={result[1]} />
+            <Result
+                img_src={result[0]}
+                name={result[1]}
+                id={result[2]}
+                choose_func={choose}
+            />
         {/each}
     </div>
 </div>

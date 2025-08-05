@@ -1,9 +1,133 @@
 {
     "characters": [
         {
-            "img_path": "/src/assets/ueki.png",
-            "name": "Ueki",
+            "id": 0,
+            "img_path": "/src/assets/Hirosif.webp",
+            "name": "Hiroshi",
             "stats": {
+                "name": "Hiroshi",
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    1.1,
+                    "3.0",
+                    4.2,
+                    5.2,
+                    6.03,
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 1,
+            "img_path": "/src/assets/Takeshi.webp",
+            "name": "Takeshi",
+            "stats": {
+                "name": "Takeshi",
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human",
+                    "Oni"
+                ],
+                "versions": [
+                    1.1,
+                    "3.0",
+                    4.2,
+                    5.2,
+                    6.03,
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "img_path": "/src/assets/Takur.webp",
+            "name": "Takuro",
+            "stats": {
+                "name": "Takuro",
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human",
+                    "Oni"
+                ],
+                "versions": [
+                    1.1,
+                    "3.0",
+                    4.2,
+                    5.2,
+                    6.03,
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "img_path": "/src/assets/Mikaf.webp",
+            "name": "Mika",
+            "stats": {
+                "name": "Mika",
+                "gender": "Female",
+                "age": 14,
+                "species": [
+                    "Human",
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0",
+                    4.2,
+                    5.2,
+                    6.03,
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "img_path": "/src/assets/Megumi.png",
+            "name": "Megumi",
+            "stats": {
+                "name": "Megumi",
+                "gender": "Female",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    1.1
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "img_path": "/src/assets/Kazuya.png",
+            "name": "Kazuya",
+            "stats": {
+                "name": "Kazuya",
                 "gender": "Male",
                 "age": 14,
                 "species": [
@@ -13,31 +137,341 @@
                     1.1
                 ],
                 "arc": {
-                    "val": 4,
-                    "name": "Silent old building arc"
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
                 }
             }
         },
         {
-            "img_path": "/src/assets/Hirosif.webp",
-            "name": "Hiroshi",
+            "id": 6,
+            "img_path": "/src/assets/merchant.png",
+            "name": "Merchant",
             "stats": {
+                "name": "Merchant",
+                "gender": "Male",
+                "age": "Unknown",
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    "3.0",
+                    6.23
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 7,
+            "img_path": "/src/assets/ryota.png",
+            "name": "Ryota",
+            "stats": {
+                "name": "Ryota",
                 "gender": "Male",
                 "age": 14,
                 "species": [
                     "Human"
                 ],
                 "versions": [
+                    1.1
+                ],
+                "arc": {
+                    "val": 0,
+                    "name": "Mansion on the outskirts of town arc"
+                }
+            }
+        },
+        {
+            "id": 8,
+            "img_path": "/src/assets/ryota2.png",
+            "name": "Ryota",
+            "stats": {
+                "name": "Ryota",
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    5.2
+                ],
+                "arc": {
+                    "val": 4,
+                    "name": "Annex Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 9,
+            "img_path": "/src/assets/megumi2.png",
+            "name": "Megumi",
+            "stats": {
+                "name": "Megumi",
+                "gender": "Female",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    5.2
+                ],
+                "arc": {
+                    "val": 4,
+                    "name": "Annex Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 10,
+            "img_path": "/src/assets/aooni.png",
+            "name": "Ao Oni",
+            "stats": {
+                "name": "Ao Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
                     1.1,
-                    3.0,
+                    "3.0",
                     4.2,
                     5.2,
                     6.03,
                     6.23
                 ],
                 "arc": {
-                    "val": 0,
-                    "name": "Mansion on the outskirts of town arc"
+                    "val": 4,
+                    "name": "Annex Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "img_path": "/src/assets/Squatto.webp",
+            "name": "Squatto",
+            "stats": {
+                "name": "Squatto",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0",
+                    6.23
+                ],
+                "arc": {
+                    "val": 1,
+                    "name": "Dark Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 12,
+            "img_path": "/src/assets/fuwatti.webp",
+            "name": "Fuwatti",
+            "stats": {
+                "name": "Fuwatti",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    6.23
+                ],
+                "arc": {
+                    "val": 5,
+                    "name": "Silent Old Building Arc"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "img_path": "/src/assets/Jeffyfish_Oni.webp",
+            "name": "Jellyfish",
+            "stats": {
+                "name": "Jellyfish",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0",
+                    6.23
+                ],
+                "arc": {
+                    "val": 2,
+                    "name": "Dingy Attic arc"
+                }
+            }
+        },
+        {
+            "id": 14,
+            "img_path": "/src/assets/hunchback.png",
+            "name": "Hunchback",
+            "stats": {
+                "name": "Hunchback",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    6.23
+                ],
+                "arc": {
+                    "val": 5,
+                    "name": "Silent Old Building Arc"
+                }
+            }
+        },
+        {
+            "id": 15,
+            "img_path": "/src/assets/4thd.webp",
+            "name": "4th Dimension Oni",
+            "stats": {
+                "name": "4th Dimension Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    6.23
+                ],
+                "arc": {
+                    "val": 5,
+                    "name": "Silent Old Building Arc"
+                }
+            }
+        },
+        {
+            "id": 16,
+            "img_path": "/src/assets/BlueRoach.webp",
+            "name": "Blue Shrimp",
+            "stats": {
+                "name": "Blue Shrimp",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni",
+                    "Insect"
+                ],
+                "versions": [
+                    6.23
+                ],
+                "arc": {
+                    "val": 3,
+                    "name": "Dilapidated Annex Arc"
+                }
+            }
+        },
+        {
+            "id": 17,
+            "img_path": "/src/assets/FlyingOni.webp",
+            "name": "Satellite Oni",
+            "stats": {
+                "name": "Satellite Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0"
+                ],
+                "arc": {
+                    "val": 2,
+                    "name": "Dingy Attic arc"
+                }
+            }
+        },
+        {
+            "id": 18,
+            "img_path": "/src/assets/Blob_Oni.webp",
+            "name": "Blob Oni / Hundred Eyes Oni",
+            "stats": {
+                "name": "Blob Oni / Hundred Eyes Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0",
+                    6.23
+                ],
+                "arc": {
+                    "val": 2,
+                    "name": "Dingy Attic arc"
+                }
+            }
+        },
+        {
+            "id": 19,
+            "img_path": "/src/assets/slug_oni.webp",
+            "name": "Slug Oni",
+            "stats": {
+                "name": "Slug Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    6.23
+                ],
+                "arc": {
+                    "val": 5,
+                    "name": "Silent Old Building Arc"
+                }
+            }
+        },
+        {
+            "id": 20,
+            "img_path": "/src/assets/FlatOni.webp",
+            "name": "Flat Oni",
+            "stats": {
+                "name": "Flat Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0"
+                ],
+                "arc": {
+                    "val": 2,
+                    "name": "Silent Old Building Arc"
+                }
+            }
+        },
+        {
+            "id": 21,
+            "img_path": "/src/assets/fangOni.png",
+            "name": "Fang Oni",
+            "stats": {
+                "name": "Fang Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    1.1,
+                    "3.0",
+                    5.2,
+                    6.23
+                ],
+                "arc": {
+                    "val": 1,
+                    "name": "Dark Basement Arc"
                 }
             }
         }

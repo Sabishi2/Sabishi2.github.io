@@ -3,10 +3,10 @@ Takeshi
 Takuro
 Mika
 Kazuya
+Ryota
 Merchant
 Ryota
 Megumi
-Ryota
 Kevin
 
 (south park hahmot erikseen)
@@ -20,7 +20,6 @@ Hunchback
 Blue Shrimp
 Satellite
 blob
-Shrimp
 Slug
 Flat Oni
 Fang Oni

@@ -19,14 +19,14 @@
                 }
             }
         });
-        if (green) {
+        if (green && rg_value.length == pg_value.length) {
             return_int = 2;
         }
         return return_int;
     };
 
     const num_comparison = (pg_value, rg_value) => {
-        // return val: 0, 1, 2, 0=smaller, 1=bigger, 2=correct
+        // return val: 0, 1, 2, 0=pg smaller, 1=pg bigger, 2=correct
         if (pg_value < rg_value) {
             return 0;
         } else if (pg_value > rg_value) {
@@ -54,7 +54,7 @@
             } else {
                 box_class = "correct";
             }
-            box_text = pg_value.toString();
+            box_text = pg_value.join(", ");
         } else {
             let compare_val = num_comparison(pg_value, rg_value);
             box_class = "incorrect";
@@ -65,9 +65,9 @@
             }
 
             if (compare_val == 0) {
-                box_text = "▼ " + box_text;
-            } else if (compare_val == 1) {
                 box_text = "▲ " + box_text;
+            } else if (compare_val == 1) {
+                box_text = "▼ " + box_text;
             } else {
                 box_class = "correct";
             }
@@ -84,7 +84,11 @@
     let arr = [];
 
     if (typeof pg_stat == "number") {
-        arr = get_class_and_text("num", pg_stat, rg_stat);
+        if (typeof rg_stat != "number") {
+            arr = ["incorrect", pg_stat];
+        } else {
+            arr = get_class_and_text("num", pg_stat, rg_stat);
+        }
     } else if (typeof pg_stat == "string") {
         arr = get_class_and_text("str", pg_stat, rg_stat);
     } else if (Array.isArray(pg_stat)) {

@@ -26,26 +26,50 @@
         }
     };
 
-    const searchChange = () => {
+    function getImageUrl(imageName) {
+        var imageUrl;
+        const modules = import.meta.glob("/src/assets/*", { eager: true });
+        for (const path in modules) {
+            console.log(path);
+            if (path.includes(imageName)) {
+                imageUrl = path;
+                break;
+            }
+        }
+        return imageUrl;
+    }
+
+    async function fetch_photo(img_src, index) {
+        let img_arr = img_src.split("/");
+        let img_str = img_arr[img_arr.length - 1];
+        let src = getImageUrl(img_str);
+
+        resultList[index][0] = src;
+    }
+
+    async function searchChange() {
         let eesyks = false;
         resultList = [];
         if (search.replace(/\s/g, "").length == 0) {
             searchResults.classList.add("inactive");
             return;
         }
+        let i = 0;
         char_info.forEach((char) => {
             if (char[1].toLowerCase().includes(search.toLowerCase())) {
                 if (!guessed_chars.includes(char[2])) {
                     resultList.push(char);
                     searchResults.classList.remove("inactive");
                     eesyks = true;
+                    fetch_photo(char[0], i);
+                    i++;
                 }
             }
         });
         if (!eesyks) {
             searchResults.classList.add("inactive");
         }
-    };
+    }
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->

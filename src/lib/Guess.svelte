@@ -5,11 +5,27 @@
     let pg_stats = player_guess_info["stats"];
     let rg_stats = right_guess_info["stats"];
     let keys = Object.keys(pg_stats);
+
+    function getImageUrl(imageName) {
+        var imageUrl;
+        const modules = import.meta.glob("/src/assets/*", { eager: true });
+        for (const path in modules) {
+            console.log(path);
+            if (path.includes(imageName)) {
+                imageUrl = path;
+                break;
+            }
+        }
+        return imageUrl;
+    }
+    let img_arr = player_guess_info["img_path"].split("/");
+    let img_str = img_arr[img_arr.length - 1];
+    let src = getImageUrl(img_str);
 </script>
 
 <div class="guess">
     <div class="char-image-container fade-in">
-        <img class="char-image" src={player_guess_info["img_path"]} />
+        <img class="char-image" {src} />
         <span class="char-text">{player_guess_info["name"]}</span>
     </div>
 

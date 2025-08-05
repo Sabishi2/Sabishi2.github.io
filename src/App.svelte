@@ -1,12 +1,10 @@
 <script>
-  import svelteLogo from "./assets/svelte.svg";
   import viteLogo from "/vite.svg";
   import Counter from "./lib/Counter.svelte";
   import Searchbar from "./lib/Searchbar.svelte";
   import Guess from "./lib/Guess.svelte";
   import { getCharacter } from "./lib/TodaysGuess.svelte";
   import winImage from "./assets/win.png";
-  import backgroundImg from "./assets/bg.jpg";
   import logo from "./assets/logo_real.png";
   import json from "./info.json";
 
@@ -89,8 +87,6 @@
   let info_for_searchbar = [];
   let character_dump = [];
 
-  let loading = fetch("./src/info.json");
-
   character_dump = json["characters"];
   character_dump.forEach((character) => {
     info_for_searchbar.push([
@@ -99,6 +95,7 @@
       character["id"],
     ]);
   });
+
   let right_char_index = getCharacter(new Date(), character_dump.length);
   right_guess_info = character_dump[right_char_index];
 
@@ -108,54 +105,50 @@
 </script>
 
 <main id="main">
-  {#await loading}
-    <div></div>
-  {:then}
-    <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <div
+    id="win-container"
+    onclick={() => {
+      hideWin();
+    }}
+    bind:this={winContainer}
+  >
     <div
-      id="win-container"
-      onclick={() => {
-        hideWin();
+      id="win-screen"
+      onmouseenter={() => {
+        mouseOverWin = true;
       }}
-      bind:this={winContainer}
+      onmouseleave={() => {
+        mouseOverWin = false;
+      }}
     >
-      <div
-        id="win-screen"
-        onmouseenter={() => {
-          mouseOverWin = true;
-        }}
-        onmouseleave={() => {
-          mouseOverWin = false;
-        }}
-      >
-        <img id="win-img" src={winImage} alt="You're winner :)" />
-        <h1>Seuraava hahmo in {time_until_next_character}</h1>
-        <br /><br /><br />
-        <h1>näin voimme jatkaa</h1>
-      </div>
+      <img id="win-img" src={winImage} alt="You're winner :)" />
+      <h1>Seuraava hahmo in {time_until_next_character}</h1>
+      <br /><br /><br />
+      <h1>näin voimme jatkaa</h1>
     </div>
-    <div id="center-container">
-      <img id="logo" src={logo} />
-      <Searchbar
-        char_info={info_for_searchbar}
-        choose_func={chooseFunc}
-        cookie_guessed={array}
-      />
-      <div id="guesses-container">
-        <div id="filters">
-          <span class="filter">Portrait</span>
-          <span class="filter">Name</span>
-          <span class="filter">Gender</span>
-          <span class="filter">Age</span>
-          <span class="filter">Species</span>
-          <span class="filter">Versions</span>
-          <span class="filter">First appearance</span>
-        </div>
-        <hr />
-        {#each player_guess_infos as pg_info (pg_info["id"])}
-          <Guess player_guess_info={pg_info} {right_guess_info} />
-        {/each}
+  </div>
+  <div id="center-container">
+    <img id="logo" src={logo} />
+    <Searchbar
+      char_info={info_for_searchbar}
+      choose_func={chooseFunc}
+      cookie_guessed={array}
+    />
+    <div id="guesses-container">
+      <div id="filters">
+        <span class="filter">Portrait</span>
+        <span class="filter">Name</span>
+        <span class="filter">Gender</span>
+        <span class="filter">Age</span>
+        <span class="filter">Species</span>
+        <span class="filter">Versions</span>
+        <span class="filter">First appearance</span>
       </div>
+      <hr />
+      {#each player_guess_infos as pg_info (pg_info["id"])}
+        <Guess player_guess_info={pg_info} {right_guess_info} />
+      {/each}
     </div>
-  {/await}
+  </div>
 </main>

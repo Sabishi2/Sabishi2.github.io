@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     let { img_src, name, id, choose_func } = $props();
     function getImageUrl(imageName) {
-        const urlPath = "https://Sabishi2.github.io/assets/";
+        const urlPath = "https://Sabishi2.github.io/";
         let imageUrl;
 
         imageUrl = urlPath + imageName;

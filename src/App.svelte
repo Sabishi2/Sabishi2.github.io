@@ -29,6 +29,7 @@
     let hours = (23 - time_right_now.getHours()).toString();
     let minutes = (59 - time_right_now.getMinutes()).toString();
     let seconds = (59 - time_right_now.getSeconds()).toString();
+
     if (hours.length == 1) {
       hours = "0" + hours;
     }

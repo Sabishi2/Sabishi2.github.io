@@ -107,13 +107,6 @@
             disabled={disabled_var}
             bind:this={bar}
         />
-        <!--
-        <input
-            type="button"
-            id="search-btn"
-            name="search-btn"
-            onclick={search_for}
-        />-->
     </div>
 
     <div id="search-results" class="inactive" bind:this={searchResults}>

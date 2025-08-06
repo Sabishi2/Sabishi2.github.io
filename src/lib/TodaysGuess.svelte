@@ -31,6 +31,9 @@
 
         let hashed = generateHash(final_hash, amount_of_chars);
         hashed = hashed % amount_of_chars;
+        if (hashed < 0) {
+            return hashed * -1;
+        }
 
         return hashed;
     };

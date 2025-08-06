@@ -102,6 +102,7 @@
   });
 
   let right_char_index = getCharacter(new Date(), character_dump.length);
+  console.log(right_char_index);
   right_guess_info = character_dump[right_char_index];
 
   array.forEach((id) => {

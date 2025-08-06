@@ -67,6 +67,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   width: 1440px;
+  max-width: 100%;
   height: auto;
 
   flex-direction: column;
@@ -75,6 +76,7 @@ h1 {
 #logo {
   margin-top: 40px;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 
 #streak-container {
@@ -95,7 +97,7 @@ h1 {
   background-color: #4e0d4b;
   border-radius: 20px;
 
-
+  max-width: 95%;
   width: 560px;
   height: 80px;
   display: flex;
@@ -119,6 +121,12 @@ h1 {
   border-radius: 20px;
 
   background-color: #4e0d4b;
+}
+
+.search-disabled {
+  color: #8f8f8f !important;
+  background-color: #362335 !important;
+
 }
 
 #search-btn {
@@ -180,12 +188,16 @@ h1 {
   margin-left: 20px;
 }
 
+#guesses-container {
+  overflow-x: auto;
+}
+
 #filters {
   width: 100%;
   font-size: 24px;
 
   display: grid;
-  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
+  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 390px;
   gap: 10px;
 }
 
@@ -203,7 +215,7 @@ h1 {
   display: grid;
   align-items: stretch;
   justify-items: stretch;
-  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 400px;
+  grid-template-columns: [Name] 160px [Character] 160px [Gender] 160px [Age] 160px [Species] 160px [versions] 190px [firstappearance] 380px;
   gap: 10px;
 
 }

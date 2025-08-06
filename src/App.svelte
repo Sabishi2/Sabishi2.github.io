@@ -20,6 +20,8 @@
   if (cookieValue != undefined) {
     array = cookieValue.split(",").map(Number);
   }
+
+  let searchBar = null;
   async function time_loop() {
     await sleep(1000);
     time_loop();
@@ -51,6 +53,8 @@
   async function correct_guess() {
     await sleep(2000);
     winContainer.classList.add("fade-in");
+
+    searchBar.disable();
   }
 
   time_loop();
@@ -105,7 +109,8 @@
 </script>
 
 <main id="main">
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <!-- svelte-ignore a11y_click_events_have_key_events -->
+  <!-- svelte ignore a11y_no_static_element_interactions -->
   <div
     id="win-container"
     onclick={() => {
@@ -134,6 +139,7 @@
       char_info={info_for_searchbar}
       choose_func={chooseFunc}
       cookie_guessed={array}
+      bind:this={searchBar}
     />
     <div id="guesses-container">
       <div id="filters">

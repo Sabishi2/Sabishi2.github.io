@@ -12,12 +12,12 @@
                     "Human"
                 ],
                 "versions": [
-                    1.1,
+                    "1.1",
                     "3.0",
-                    4.2,
-                    5.2,
-                    6.03,
-                    6.23
+                    "4.2",
+                    "5.2",
+                    "6.03",
+                    "6.23"
                 ],
                 "arc": {
                     "val": 0,
@@ -38,12 +38,12 @@
                     "Oni"
                 ],
                 "versions": [
-                    1.1,
+                    "1.1",
                     "3.0",
-                    4.2,
-                    5.2,
-                    6.03,
-                    6.23
+                    "4.2",
+                    "5.2",
+                    "6.03",
+                    "6.23"
                 ],
                 "arc": {
                     "val": 0,
@@ -64,12 +64,12 @@
                     "Oni"
                 ],
                 "versions": [
-                    1.1,
+                    "1.1",
                     "3.0",
-                    4.2,
-                    5.2,
-                    6.03,
-                    6.23
+                    "4.2",
+                    "5.2",
+                    "6.03",
+                    "6.23"
                 ],
                 "arc": {
                     "val": 0,
@@ -91,10 +91,10 @@
                 ],
                 "versions": [
                     "3.0",
-                    4.2,
-                    5.2,
-                    6.03,
-                    6.23
+                    "4.2",
+                    "5.2",
+                    "6.03",
+                    "6.23"
                 ],
                 "arc": {
                     "val": 0,
@@ -114,7 +114,7 @@
                     "Human"
                 ],
                 "versions": [
-                    1.1
+                    "1.1"
                 ],
                 "arc": {
                     "val": 0,
@@ -134,7 +134,7 @@
                     "Human"
                 ],
                 "versions": [
-                    1.1
+                    "1.1"
                 ],
                 "arc": {
                     "val": 0,
@@ -155,7 +155,7 @@
                 ],
                 "versions": [
                     "3.0",
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 0,
@@ -175,7 +175,7 @@
                     "Human"
                 ],
                 "versions": [
-                    1.1
+                    "1.1"
                 ],
                 "arc": {
                     "val": 0,
@@ -195,7 +195,7 @@
                     "Human"
                 ],
                 "versions": [
-                    5.2
+                    "5.2"
                 ],
                 "arc": {
                     "val": 4,
@@ -215,7 +215,7 @@
                     "Human"
                 ],
                 "versions": [
-                    5.2
+                    "5.2"
                 ],
                 "arc": {
                     "val": 4,
@@ -235,12 +235,12 @@
                     "Oni"
                 ],
                 "versions": [
-                    1.1,
+                    "1.1",
                     "3.0",
-                    4.2,
-                    5.2,
-                    6.03,
-                    6.23
+                    "4.2",
+                    "5.2",
+                    "6.03",
+                    "6.23"
                 ],
                 "arc": {
                     "val": 4,
@@ -261,7 +261,7 @@
                 ],
                 "versions": [
                     "3.0",
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 1,
@@ -281,7 +281,7 @@
                     "Oni"
                 ],
                 "versions": [
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 5,
@@ -291,7 +291,7 @@
         },
         {
             "id": 13,
-            "img_path": "Jeffyfish_Oni.webp",
+            "img_path": "Enchlapho.webp",
             "name": "Jellyfish",
             "stats": {
                 "name": "Jellyfish",
@@ -302,7 +302,7 @@
                 ],
                 "versions": [
                     "3.0",
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 2,
@@ -322,7 +322,7 @@
                     "Oni"
                 ],
                 "versions": [
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 5,
@@ -342,7 +342,7 @@
                     "Oni"
                 ],
                 "versions": [
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 5,
@@ -352,7 +352,7 @@
         },
         {
             "id": 16,
-            "img_path": "BlueRoach.webp",
+            "img_path": "BlueRoach.png",
             "name": "Blue Shrimp",
             "stats": {
                 "name": "Blue Shrimp",
@@ -363,7 +363,7 @@
                     "Insect"
                 ],
                 "versions": [
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 3,
@@ -373,7 +373,7 @@
         },
         {
             "id": 17,
-            "img_path": "FlyingOni.webp",
+            "img_path": "Enemy_satellite.webp",
             "name": "Satellite Oni",
             "stats": {
                 "name": "Satellite Oni",
@@ -404,7 +404,7 @@
                 ],
                 "versions": [
                     "3.0",
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 2,
@@ -424,7 +424,7 @@
                     "Oni"
                 ],
                 "versions": [
-                    6.23
+                    "6.23"
                 ],
                 "arc": {
                     "val": 5,
@@ -434,7 +434,7 @@
         },
         {
             "id": 20,
-            "img_path": "FlatOni.webp",
+            "img_path": "Enemy_Tall.webp",
             "name": "Flat Oni",
             "stats": {
                 "name": "Flat Oni",
@@ -464,10 +464,70 @@
                     "Oni"
                 ],
                 "versions": [
-                    1.1,
+                    "1.1",
                     "3.0",
-                    5.2,
-                    6.23
+                    "5.2",
+                    "6.23"
+                ],
+                "arc": {
+                    "val": 1,
+                    "name": "Dark Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 22,
+            "img_path": "Enemy_clockoni.webp",
+            "name": "Amoeba Oni",
+            "stats": {
+                "name": "Amoeba Oni",
+                "gender": "Unknown",
+                "age": "Unknown",
+                "species": [
+                    "Oni"
+                ],
+                "versions": [
+                    "3.0"
+                ],
+                "arc": {
+                    "val": 2,
+                    "name": "Dingy Attic arc"
+                }
+            }
+        },
+        {
+            "id": 23,
+            "img_path": "kevin.webp",
+            "name": "Shim \"Kevin\"",
+            "stats": {
+                "name": "Shim \"Kevin\"",
+                "gender": "Male",
+                "age": "Unknown",
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    "5.2"
+                ],
+                "arc": {
+                    "val": 4,
+                    "name": "Annex Basement Arc"
+                }
+            }
+        },
+        {
+            "id": 24,
+            "img_path": "naoki.png",
+            "name": "Naoki",
+            "stats": {
+                "name": "Naoki",
+                "gender": "Male",
+                "age": 14,
+                "species": [
+                    "Human"
+                ],
+                "versions": [
+                    "3.0"
                 ],
                 "arc": {
                     "val": 1,

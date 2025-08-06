@@ -6,8 +6,17 @@
     let { char_info, choose_func, cookie_guessed } = $props();
     let searchResults = null;
     let search = $state("");
+    let disabled_var = $state(false);
+    let container = null;
+    let bar = null;
     let mouseOver = false;
     let resultList = $state([]);
+
+    export const disable = () => {
+        disabled_var = true;
+        container.classList.add("search-disabled");
+        bar.classList.add("search-disabled");
+    };
 
     let guessed_chars = cookie_guessed;
     const choose = (name, id) => {
@@ -83,6 +92,7 @@
     onmouseleave={() => {
         mouseOver = false;
     }}
+    bind:this={container}
 >
     <div id="search-bar-container-inner">
         <input
@@ -94,6 +104,8 @@
             id="search-bar"
             name="search-bar"
             placeholder="Write your search here (e.g Hiroshi)"
+            disabled={disabled_var}
+            bind:this={bar}
         />
         <!--
         <input

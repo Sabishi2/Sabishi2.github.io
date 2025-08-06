@@ -105,6 +105,9 @@
 
   array.forEach((id) => {
     player_guess_infos.push(character_dump[id]);
+    if (id == right_guess_info["id"]) {
+      correct_guess();
+    }
   });
 </script>
 

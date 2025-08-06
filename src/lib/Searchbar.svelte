@@ -27,15 +27,11 @@
     };
 
     function getImageUrl(imageName) {
-        var imageUrl;
-        const modules = import.meta.glob("./src/assets/*", { eager: true });
-        for (const path in modules) {
-            console.log(path);
-            if (path.includes(imageName)) {
-                imageUrl = path;
-                break;
-            }
-        }
+        const urlPath = "https://Sabishi2.github.io/public/";
+        let imageUrl;
+
+        imageUrl = urlPath + imageName;
+
         return imageUrl;
     }
 

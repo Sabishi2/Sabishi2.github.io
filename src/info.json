@@ -2,7 +2,7 @@
     "characters": [
         {
             "id": 0,
-            "img_path": "/src/assets/Hirosif.webp",
+            "img_path": "Hirosif.webp",
             "name": "Hiroshi",
             "stats": {
                 "name": "Hiroshi",
@@ -27,7 +27,7 @@
         },
         {
             "id": 1,
-            "img_path": "/src/assets/Takeshi.webp",
+            "img_path": "Takeshi.webp",
             "name": "Takeshi",
             "stats": {
                 "name": "Takeshi",
@@ -53,7 +53,7 @@
         },
         {
             "id": 2,
-            "img_path": "/src/assets/Takur.webp",
+            "img_path": "Takur.webp",
             "name": "Takuro",
             "stats": {
                 "name": "Takuro",
@@ -79,7 +79,7 @@
         },
         {
             "id": 3,
-            "img_path": "/src/assets/Mikaf.webp",
+            "img_path": "Mikaf.webp",
             "name": "Mika",
             "stats": {
                 "name": "Mika",
@@ -104,7 +104,7 @@
         },
         {
             "id": 4,
-            "img_path": "/src/assets/Megumi.png",
+            "img_path": "Megumi.png",
             "name": "Megumi",
             "stats": {
                 "name": "Megumi",
@@ -124,7 +124,7 @@
         },
         {
             "id": 5,
-            "img_path": "/src/assets/Kazuya.png",
+            "img_path": "Kazuya.png",
             "name": "Kazuya",
             "stats": {
                 "name": "Kazuya",
@@ -144,7 +144,7 @@
         },
         {
             "id": 6,
-            "img_path": "/src/assets/merchant.png",
+            "img_path": "merchant.png",
             "name": "Merchant",
             "stats": {
                 "name": "Merchant",
@@ -165,7 +165,7 @@
         },
         {
             "id": 7,
-            "img_path": "/src/assets/ryota.png",
+            "img_path": "ryota.png",
             "name": "Ryota",
             "stats": {
                 "name": "Ryota",
@@ -185,7 +185,7 @@
         },
         {
             "id": 8,
-            "img_path": "/src/assets/ryota2.png",
+            "img_path": "ryota2.png",
             "name": "Ryota",
             "stats": {
                 "name": "Ryota",
@@ -205,7 +205,7 @@
         },
         {
             "id": 9,
-            "img_path": "/src/assets/megumi2.png",
+            "img_path": "megumi2.png",
             "name": "Megumi",
             "stats": {
                 "name": "Megumi",
@@ -225,7 +225,7 @@
         },
         {
             "id": 10,
-            "img_path": "/src/assets/aooni.png",
+            "img_path": "aooni.png",
             "name": "Ao Oni",
             "stats": {
                 "name": "Ao Oni",
@@ -250,7 +250,7 @@
         },
         {
             "id": 11,
-            "img_path": "/src/assets/Squatto.webp",
+            "img_path": "Squatto.webp",
             "name": "Squatto",
             "stats": {
                 "name": "Squatto",
@@ -271,7 +271,7 @@
         },
         {
             "id": 12,
-            "img_path": "/src/assets/fuwatti.webp",
+            "img_path": "fuwatti.webp",
             "name": "Fuwatti",
             "stats": {
                 "name": "Fuwatti",
@@ -291,7 +291,7 @@
         },
         {
             "id": 13,
-            "img_path": "/src/assets/Jeffyfish_Oni.webp",
+            "img_path": "Jeffyfish_Oni.webp",
             "name": "Jellyfish",
             "stats": {
                 "name": "Jellyfish",
@@ -312,7 +312,7 @@
         },
         {
             "id": 14,
-            "img_path": "/src/assets/hunchback.png",
+            "img_path": "hunchback.png",
             "name": "Hunchback",
             "stats": {
                 "name": "Hunchback",
@@ -332,7 +332,7 @@
         },
         {
             "id": 15,
-            "img_path": "/src/assets/4thd.webp",
+            "img_path": "4thd.webp",
             "name": "4th Dimension Oni",
             "stats": {
                 "name": "4th Dimension Oni",
@@ -352,7 +352,7 @@
         },
         {
             "id": 16,
-            "img_path": "/src/assets/BlueRoach.webp",
+            "img_path": "BlueRoach.webp",
             "name": "Blue Shrimp",
             "stats": {
                 "name": "Blue Shrimp",
@@ -373,7 +373,7 @@
         },
         {
             "id": 17,
-            "img_path": "/src/assets/FlyingOni.webp",
+            "img_path": "FlyingOni.webp",
             "name": "Satellite Oni",
             "stats": {
                 "name": "Satellite Oni",
@@ -393,7 +393,7 @@
         },
         {
             "id": 18,
-            "img_path": "/src/assets/Blob_Oni.webp",
+            "img_path": "Blob_Oni.webp",
             "name": "Blob Oni / Hundred Eyes Oni",
             "stats": {
                 "name": "Blob Oni / Hundred Eyes Oni",
@@ -414,7 +414,7 @@
         },
         {
             "id": 19,
-            "img_path": "/src/assets/slug_oni.webp",
+            "img_path": "slug_oni.webp",
             "name": "Slug Oni",
             "stats": {
                 "name": "Slug Oni",
@@ -434,7 +434,7 @@
         },
         {
             "id": 20,
-            "img_path": "/src/assets/FlatOni.webp",
+            "img_path": "FlatOni.webp",
             "name": "Flat Oni",
             "stats": {
                 "name": "Flat Oni",
@@ -454,7 +454,7 @@
         },
         {
             "id": 21,
-            "img_path": "/src/assets/fangOni.png",
+            "img_path": "fangOni.png",
             "name": "Fang Oni",
             "stats": {
                 "name": "Fang Oni",

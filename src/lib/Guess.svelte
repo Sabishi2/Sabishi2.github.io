@@ -7,20 +7,27 @@
     let keys = Object.keys(pg_stats);
 
     function getImageUrl(imageName) {
-        var imageUrl;
-        const modules = import.meta.glob("/src/assets/*", { eager: true });
-        for (const path in modules) {
-            console.log(path);
-            if (path.includes(imageName)) {
-                imageUrl = path;
-                break;
-            }
-        }
+        const urlPath = "https://Sabishi2.github.io/";
+        let imageUrl;
+
+        imageUrl = urlPath + imageName;
+
         return imageUrl;
     }
-    let img_arr = player_guess_info["img_path"].split("/");
-    let img_str = img_arr[img_arr.length - 1];
-    let src = getImageUrl(img_str);
+
+    async function fetch_image(img_src, index) {
+        const response = await fetch(img_src);
+        const bloby = await response.blob();
+
+        return [index, URL.createObjectURL(bloby)];
+    }
+
+    let src = $state("");
+    fetch_image(getImageUrl(player_guess_info["img_path"]), 0).then(
+        (result) => {
+            src = result[1];
+        },
+    );
 </script>
 
 <div class="guess">

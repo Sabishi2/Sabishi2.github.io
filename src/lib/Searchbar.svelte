@@ -1,6 +1,7 @@
 <script>
     import { get } from "svelte/store";
     import Result from "./Result.svelte";
+    import { onMount } from "svelte";
 
     let { char_info, choose_func, cookie_guessed } = $props();
     let searchResults = null;
@@ -27,6 +28,22 @@
         }
     };
 
+    function getImageUrl(imageName) {
+        const urlPath = "https://Sabishi2.github.io/";
+        let imageUrl;
+
+        imageUrl = urlPath + imageName;
+
+        return imageUrl;
+    }
+
+    async function fetch_image(img_src, index) {
+        const response = await fetch(img_src);
+        const bloby = await response.blob();
+
+        return [index, URL.createObjectURL(bloby)];
+    }
+
     function searchChange() {
         let eesyks = false;
         resultList = [];
@@ -34,6 +51,7 @@
             searchResults.classList.add("inactive");
             return;
         }
+        let i = 0;
         char_info.forEach((char) => {
             if (char[1].toLowerCase().includes(search.toLowerCase())) {
                 if (!guessed_chars.includes(char[2])) {
@@ -42,10 +60,17 @@
                     eesyks = true;
                 }
             }
+            i++;
         });
         if (!eesyks) {
             searchResults.classList.add("inactive");
         }
+    }
+    for (let i = 0; i < char_info.length; i++) {
+        // This is dumb as hell but since it's asynced just give the async func the index we want to append so it doesn't get mixed up in the then statement
+        fetch_image(getImageUrl(char_info[i][0]), i).then((result) => {
+            char_info[result[0]][0] = result[1];
+        });
     }
 </script>
 
